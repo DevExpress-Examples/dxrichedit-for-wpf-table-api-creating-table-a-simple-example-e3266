@@ -40,11 +40,11 @@ namespace Walkthrough_Creating_Table {
             cp_Header.FontName = "Verdana";
             cp_Header.FontSize = 16;
             doc.EndUpdateCharacters(cp_Header);
-            doc.InsertParagraph(rng.End);
-            doc.InsertParagraph(rng.End);
+            doc.Paragraphs.Insert(rng.End);
+            doc.Paragraphs.Insert(rng.End);
 
             // Add the table
-            doc.Tables.Add(rng.End, 1, 3, AutoFitBehaviorType.AutoFitToWindow);
+            doc.Tables.Create(rng.End, 1, 3, AutoFitBehaviorType.AutoFitToWindow);
             // Format the table
             Table tbl = doc.Tables[0];
 
