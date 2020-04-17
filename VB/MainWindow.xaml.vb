@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Drawing
 Imports System.Windows
 Imports System.IO
@@ -13,6 +12,7 @@ Namespace Walkthrough_Creating_Table
 	''' </summary>
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 			AddHandler richEditControl1.Loaded, AddressOf richEditControl1_Loaded
@@ -71,8 +71,8 @@ Namespace Walkthrough_Creating_Table
 				' Apply a style to the table
 				tbl.Style = doc.TableStyles("MyTableGridNumberEight")
 				' Specify right and left paddings equal to 0.08 inches for all cells in a table
-				tbl.RightPadding = Units.InchesToDocumentsF(0.08f)
-				tbl.LeftPadding = Units.InchesToDocumentsF(0.08f)
+				tbl.RightPadding = Units.InchesToDocumentsF(0.08F)
+				tbl.LeftPadding = Units.InchesToDocumentsF(0.08F)
 			Finally
 				'tbl.EndUpdate();
 			End Try
@@ -94,27 +94,27 @@ Namespace Walkthrough_Creating_Table
 
 			borders.Bottom.LineColor = Color.DarkBlue
 			borders.Bottom.LineStyle = TableBorderLineStyle.Single
-			borders.Bottom.LineThickness = 0.75f
+			borders.Bottom.LineThickness = 0.75F
 
 			borders.Left.LineColor = Color.DarkBlue
 			borders.Left.LineStyle = TableBorderLineStyle.Single
-			borders.Left.LineThickness = 0.75f
+			borders.Left.LineThickness = 0.75F
 
 			borders.Right.LineColor = Color.DarkBlue
 			borders.Right.LineStyle = TableBorderLineStyle.Single
-			borders.Right.LineThickness = 0.75f
+			borders.Right.LineThickness = 0.75F
 
 			borders.Top.LineColor = Color.DarkBlue
 			borders.Top.LineStyle = TableBorderLineStyle.Single
-			borders.Top.LineThickness = 0.75f
+			borders.Top.LineThickness = 0.75F
 
 			borders.InsideVerticalBorder.LineColor = Color.DarkBlue
 			borders.InsideVerticalBorder.LineStyle = TableBorderLineStyle.Single
-			borders.InsideVerticalBorder.LineThickness = 0.75f
+			borders.InsideVerticalBorder.LineThickness = 0.75F
 
 			borders.InsideHorizontalBorder.LineColor = Color.DarkBlue
 			borders.InsideHorizontalBorder.LineStyle = TableBorderLineStyle.Single
-			borders.InsideHorizontalBorder.LineThickness = 0.75f
+			borders.InsideHorizontalBorder.LineThickness = 0.75F
 
 			tStyleGrid8.CellBackgroundColor = Color.Transparent
 			tStyleGrid8.Name = "MyTableGridNumberEight"
